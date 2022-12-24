@@ -6,19 +6,23 @@ font-family: 'Open Sans', sans-serif; */
 body {
     font-family: 'Nunito', sans-serif;
     font-size: large;
+    line-height: 2;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 #heading {
-    text-align: center;
+    text-align: left;
     font-family: 'Nunito', sans-serif;
     font-weight: 1000;
 }
 
 #footer-links {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#navigation-bar {
-    color: white;
-
+#dropdownMenuButton {
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
