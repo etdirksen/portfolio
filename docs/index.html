@@ -11,19 +11,24 @@
 </head>
 <body>
     <!-- Container wrapper -->
-    <div class="container-sm">
-
-        <!-- Navigation dropdown button -->
-        <div class="btn-group dropend">
-            <button class="btn btn-white dropdown-toggle shadow-lg" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Navigation
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href=index.html>Home</a>
-                <a class="dropdown-item" href=portfolio.html>Portfolio</a>
-                <a class="dropdown-item" href=resume.html>Resume</a>
-                <a class="dropdown-item disabled" href="about.html">About</a>
-            </div>
+    <div class="container-fluid">
+        <!-- Creating a Navbar -->
+        <div class="container-fluid" id="siteNavigation">
+            <!-- Creating a Navbar -->
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://etdirksen.github.io/portfolio/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://etdirksen.github.io/portfolio/resume.html">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://etdirksen.github.io/portfolio/portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="https://etdirksen.github.io/portfolio/about.html">About</a>
+                </li>
+            </ul>
         </div>
 
         <!-- Page title / heading -->
@@ -36,17 +41,19 @@
 
         <!-- Content body -->
         <div class="col-md-12">
-            All of the projects I have completed throughout the 2022 Data Analytics course, offered through the University of Wisconsin-Madison, are on display here. 
-            My latest resume is available to read on the site with interactive links to company websites and GitHub repositories which hold my work.
+        <body>
+            All of the projects I have completed throughout the 2022 Data Analytics course, offered through the University of Wisconsin-Madison, are on display here. My latest resume is available to read on the site with interactive links to company websites and GitHub repositories which hold my work.
+        </body>
         </div>
         <br>
-        <div class="card" id="footer-links">
-            <div class="d-flex flex-row justify-content-sm-around bd-highlight">
-                <button type="button" class="btn btn-link"><a href="mailto:edirksen.work@gmail.com">Work Email</a></button>
-                <button type='button' class="btn btn-link"><a href="https://www.linkedin.com/in/ethandirksen/">LinkedIn</a></button>
-                <button type='button' class="btn btn-link"><a href="https://github.com/etdirksen">GitHub Page</a></button>
-            </div>
+
+        <!-- Footer - contact links -->
+        <div class="btn-group" role="group" id="footer-links">
+            <button type="button" class="btn btn-white shadow-lg"><a href="mailto:edirksen.work@gmail.com">Contact me</a></button>
+            <button type='button' class="btn btn-white shadow-lg"><a href="https://www.linkedin.com/in/ethandirksen/">LinkedIn</a></button>
+            <button type='button' class="btn btn-white shadow-lg"><a href="https://github.com/etdirksen">GitHub Page</a></button>
         </div>
+
     </div>
 </body>
 </html>

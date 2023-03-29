@@ -13,17 +13,23 @@
     <!-- Container wrapper -->
     <div class="container-sm">
 
-        <!-- Navigation dropdown button -->
-        <div class="btn-group dropend">
-            <button class="btn btn-white dropdown-toggle shadow-lg" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Navigation
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href=index.html>Home</a>
-                <a class="dropdown-item" href=portfolio.html>Portfolio</a>
-                <a class="dropdown-item" href=resume.html>Resume</a>
-                <a class="dropdown-item disabled" href="about.html">About</a>
-            </div>
+        <!-- Creating a Navbar -->
+        <div class="container-fluid" id="siteNavigation">
+            <!-- Creating a Navbar -->
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://etdirksen.github.io/portfolio/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://etdirksen.github.io/portfolio/resume.html">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://etdirksen.github.io/portfolio/portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="https://etdirksen.github.io/portfolio/about.html">About</a>
+                </li>
+            </ul>
         </div>
 
         <!-- Page title / heading -->
@@ -36,39 +42,52 @@
         </div>
 
         <!-- Cards -->
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <a href="https://github.com/etdirksen/Retiring-Employee-Analysis"><img src="https://raw.githubusercontent.com/etdirksen/Retiring-Employee-Analysis/main/Resources/code_for_mentorship_eligible.png" class="card-img-top" alt="PostgreSQL Analysis: Retiring Employees"></a>
                     <div class="card-body">
-                        <h5>Final Project</h5>
-                        <p class="card-text">By Ethan Dirksen, Noah Davis, Olufemi Peter Adio, and Ashlesha Vangareddy.</p>
+                        <h5 class="card-title"><b>PostgreSQL Analysis: Retiring Employees</b></h5>
+                        <p class="card-text">The purpose of this analysis was to find how many employees are going to be retiring soon from a given dataset. I needed to find who will be retiring and how many openings will be available when these workers do retire.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted"><a href="https://github.com/etdirksen/Retiring-Employee-Analysis">GitHub repository</a></small>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <a href="https://github.com/etdirksen/Rideshare-Analysis-Visualization"><img src="https://raw.githubusercontent.com/etdirksen/Rideshare-Analysis-Visualization/main/resources/7.png" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                        <h5>Final Project</h5>
-                        <p class="card-text">By Ethan Dirksen, Noah Davis, Olufemi Peter Adio, and Ashlesha Vangareddy.</p>
+                        <h5 class="card-title"><b>Rideshare Expansion Analysis & Interactive Visualization</b></h5>
+                       <p class="card-text">The purpose of this analysis is to determine whether a company should expand its bike-sharing program from a heavily populated city like NYC to Des Moines, a city that has a fraction of the population. I am conducting an analysis on the program based on data from NYC for the month of August 2019.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted"><a href="https://github.com/etdirksen/Rideshare-Analysis-Visualization">GitHub repository</a></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <a href="https://github.com/etdirksen/Biodiversity-Analysis"><img src="https://raw.githubusercontent.com/etdirksen/Biodiversity-Analysis/main/docs/img/overview%20(1).png" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Biodiversity Analysis: Bellybutton Bacteria</b></h5>
+                       <p class="card-text">I built a webpage using HTML and JavaScript to display an analysis conducted on a set of data for bellybutton bacteria. The webpage is deployed through GitHub pages</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted"><a href="https://github.com/etdirksen/Biodiversity-Analysis">GitHub repository</a> | <a href="https://etdirksen.github.io/Biodiversity-Analysis/">Project webpage</a></small>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5>Final Project</h5>
-                    <p class="card-text">By Ethan Dirksen, Noah Davis, Olufemi Peter Adio, and Ashlesha Vangareddy.</p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5>Final Project</h5>
-                    <p class="card-text">By Ethan Dirksen, Noah Davis, Olufemi Peter Adio, and Ashlesha Vangareddy.</p>
-                </div>
-            </div>
+
+        <!-- Footer - contact links -->
+        <div class="btn-group" role="group" id="footer-links">
+            <button type="button" class="btn btn-white shadow-lg"><a href="mailto:edirksen.work@gmail.com">Contact me</a></button>
+            <button type='button' class="btn btn-white shadow-lg"><a href="https://www.linkedin.com/in/ethandirksen/">LinkedIn</a></button>
+            <button type='button' class="btn btn-white shadow-lg"><a href="https://github.com/etdirksen">GitHub Page</a></button>
         </div>
 </body>
 </html>
