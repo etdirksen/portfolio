@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    font-size: .95vw;
+    font-size: 1.1vw;
     line-height: 2vw;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -12,6 +12,7 @@ body {
 #siteNavigation {
     margin-top: 2vw;
     margin-bottom: 2vw;
+    font-size: 1.1vw;
 }
 
 #heading {
