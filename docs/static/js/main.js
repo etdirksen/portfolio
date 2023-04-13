@@ -1,4 +1,3 @@
-console.log("If you're reading this: the code worked, Morty!");
 import * as navAndFooterLinks from "./generateNavbarAndFooter.js";
 
 // This is a pseudo-dictionary; the key is:
@@ -69,10 +68,21 @@ import * as navAndFooterLinks from "./generateNavbarAndFooter.js";
 //     };
 // };
 
+
 navAndFooterLinks.createNavbarContainer("mainContainer");
 navAndFooterLinks.createNavbarNavElement("navbarContainer");
 navAndFooterLinks.createNavbarOrderedList("navbar");
 
-navAndFooterLinks.navbarPagesDict.forEach(function(key) {
-    navAndFooterLinks.createNavbarListElement("navbar-ol-element", key[0], key[1]);
+navAndFooterLinks.navbarPagesList.forEach(function(item) {
+    navAndFooterLinks.createNavbarListElement("navbar-ol-element", item[0], item[1]);
 });
+
+navAndFooterLinks.createFooterLinkContainer("mainContainer");
+navAndFooterLinks.createFooterLinkCenteredDiv("footer-container");
+navAndFooterLinks.createFooterGroup("footer-links-div");
+
+navAndFooterLinks.footerLinksList.forEach(function(item) {
+    navAndFooterLinks.createFooterButton("footer-links-group", item[0], item[1]);
+});
+
+console.log("If you're reading this: the code worked, Morty!");
