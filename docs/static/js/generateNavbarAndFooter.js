@@ -1,3 +1,5 @@
+// Navbar and Footer links and text titles.
+// Used in the functions below - update to add more to the page!
 export const navbarPagesList = [
     ["Home","index.html"], 
     ["Resume","resume.html"],
@@ -10,6 +12,16 @@ export const footerLinksList = [
     ["LinkedIn Profile", "https://www.linkedin.com/in/ethandirksen/"],
     ["GitHub Page", "https://github.com/etdirksen"]
 ];
+
+
+
+
+
+
+//  *********************************************
+//  NAVBAR CREATION FUNCTIONS
+//  *********************************************
+//  These functions create the HTML elements for the Navbar breadcrumb element at the top of each page.
 
 export function createNavbarContainer(nameOfParentElement) {
     let parentElement = document.getElementById(nameOfParentElement);
@@ -68,6 +80,15 @@ export function createNavbarListElement(nameOfParentElement, text, link) {
     };
 };
 
+
+
+
+
+//  *********************************************
+//  FOOTER CREATION FUNCTIONS
+//  *********************************************
+//  These functions create the HTML elements for the footer button group at the bottom of each page.
+
 export function createFooterLinkContainer(nameOfParentElement) {
     let parentElement = document.getElementById(nameOfParentElement);
 
@@ -109,4 +130,40 @@ export function createFooterButton(nameOfParentElement, text, link) {
 
     parentElement.insertAdjacentElement("beforeend", footerButton);
     footerButton.insertAdjacentElement("beforeend", footerButtonLink);
+};
+
+
+
+
+
+//  *********************************************
+//  DARK MODE/LIGHT MODE CREATION FUNCTIONS
+//  *********************************************
+//  These functions create the HTML elements for the dark/light mode button at the top of each page.
+
+export function createDarkModeCol(nameOfParentElement) {
+    let parentElement = document.getElementById(nameOfParentElement);
+
+    let darkModeContainer = document.createElement("div");
+    darkModeContainer.id = "dark-mode-container";
+    darkModeContainer.className = "col-1 text-end";
+    parentElement.insertAdjacentElement("beforeend", darkModeContainer);
+};
+
+export function createDarkModeButton(nameOfParentElement) {
+    let parentElement = document.getElementById(nameOfParentElement);
+    let darkModeButton = document.createElement("button");
+    darkModeButton.id = "dark-mode-button";
+    darkModeButton.className = "btn";
+    parentElement.insertAdjacentElement("beforeend", darkModeButton);
+};
+
+export function createDarkModeButtonImg(nameOfParentElement) {
+    let parentElement = document.getElementById(nameOfParentElement);
+
+    let darkModeButtonImg = document.createElement("i");
+    darkModeButtonImg.id = "dark-mode-button-img";
+    darkModeButtonImg.className = "bi bi-moon-stars-fill";
+
+    parentElement.insertAdjacentElement("beforeend", darkModeButtonImg);
 };
