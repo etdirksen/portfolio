@@ -2,12 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;900&family=Open+Sans:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+:root {
+    --background-color: #fff;
+}
+
 body {
     font-family: 'Space Mono', monospace;
     font-size: 1rem;
     line-height: 1.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    transition: background-color .2s ease, color .2s ease;
 }
 
 #shared-title-container {
@@ -65,4 +70,28 @@ body {
 
 #footer-links-group button {
     font-size: 0.8rem;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+
+    #shared-title-row {
+        color: #fff;
+    }
+
+    #dark-mode-button {
+        background-color: white;
+    }
+
+    #dark-mode-button:hover {
+        padding: 0%;
+        background-color: black;
+        color: white;
+    }
+
+    #dark-mode-button-img:hover {
+        padding: 0%;
+        color: white;
+    }
 }
