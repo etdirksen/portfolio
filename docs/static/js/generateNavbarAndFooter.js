@@ -3,7 +3,7 @@
 export const navbarPagesList = [
     ["Home","index.html"], 
     ["Resume","resume.html"],
-    ["Porfolio","portfolio.html"],
+    ["Portfolio","portfolio.html"],
     ["About", null]
 ];
 
@@ -12,8 +12,6 @@ export const footerLinksList = [
     ["LinkedIn Profile", "https://www.linkedin.com/in/ethandirksen/"],
     ["GitHub Page", "https://github.com/etdirksen"]
 ];
-
-
 
 
 
@@ -85,6 +83,51 @@ export function createNavbarListElement(nameOfParentElement, text, link) {
 
 
 //  *********************************************
+//  DARK MODE/LIGHT MODE CREATION FUNCTIONS
+//  *********************************************
+//  These functions create the HTML elements for the dark/light mode button at the top of each page.
+//  The button is its own column and shares a row with the title column.
+
+export function createDarkModeCol(nameOfParentElement) {
+    let parentElement = document.getElementById(nameOfParentElement);
+
+    let darkModeContainer = document.createElement("div");
+    darkModeContainer.id = "dark-mode-container";
+    darkModeContainer.className = "col-1 text-end";
+    parentElement.insertAdjacentElement("beforeend", darkModeContainer);
+};
+
+export function createDarkModeButton(nameOfParentElement) {
+    let parentElement = document.getElementById(nameOfParentElement);
+    let darkModeButton = document.createElement("button");
+    darkModeButton.id = "dark-mode-button";
+    darkModeButton.className = "btn";
+    parentElement.insertAdjacentElement("beforeend", darkModeButton);
+
+
+    darkModeButton.addEventListener("click", function() {
+        console.log("You clicked the button, Morty!");
+
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    });   
+
+};
+
+export function createDarkModeButtonImg(nameOfParentElement) {
+    let parentElement = document.getElementById(nameOfParentElement);
+
+    let darkModeButtonImg = document.createElement("i");
+    darkModeButtonImg.id = "dark-mode-button-img";
+    darkModeButtonImg.className = "bi bi-moon-stars-fill";
+
+    parentElement.insertAdjacentElement("beforeend", darkModeButtonImg);
+};
+
+
+
+
+//  *********************************************
 //  FOOTER CREATION FUNCTIONS
 //  *********************************************
 //  These functions create the HTML elements for the footer button group at the bottom of each page.
@@ -135,35 +178,24 @@ export function createFooterButton(nameOfParentElement, text, link) {
 
 
 
-
 //  *********************************************
-//  DARK MODE/LIGHT MODE CREATION FUNCTIONS
+// EVERYTHING ELSE
 //  *********************************************
-//  These functions create the HTML elements for the dark/light mode button at the top of each page.
+//  ?
 
-export function createDarkModeCol(nameOfParentElement) {
-    let parentElement = document.getElementById(nameOfParentElement);
-
-    let darkModeContainer = document.createElement("div");
-    darkModeContainer.id = "dark-mode-container";
-    darkModeContainer.className = "col-1 text-end";
-    parentElement.insertAdjacentElement("beforeend", darkModeContainer);
-};
-
-export function createDarkModeButton(nameOfParentElement) {
-    let parentElement = document.getElementById(nameOfParentElement);
-    let darkModeButton = document.createElement("button");
-    darkModeButton.id = "dark-mode-button";
-    darkModeButton.className = "btn";
-    parentElement.insertAdjacentElement("beforeend", darkModeButton);
-};
-
-export function createDarkModeButtonImg(nameOfParentElement) {
-    let parentElement = document.getElementById(nameOfParentElement);
-
-    let darkModeButtonImg = document.createElement("i");
-    darkModeButtonImg.id = "dark-mode-button-img";
-    darkModeButtonImg.className = "bi bi-moon-stars-fill";
-
-    parentElement.insertAdjacentElement("beforeend", darkModeButtonImg);
-};
+ document.addEventListener('DOMContentLoaded', function() {
+    checkbox.addEventListener('change', function() {
+        localStorage.setItem('dark', this.checked);
+        if (this.checked) {
+            body.classList.add('dark')
+        } else {
+            body.classList.remove('dark')
+        }
+    });
+    
+    // On each page:
+    if (localStorage.getItem('dark')) {
+        body.classList.add('dark');
+    }
+    
+});
