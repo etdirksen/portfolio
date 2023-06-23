@@ -1,61 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Index</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/style.css"/>
-</head>
-<body>
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-        <!-- Creating a Navbar -->
-        <div class="container-fluid" id="siteNavigation">
-            <!-- Creating a Navbar -->
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resume.html">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="about.html">About</a>
-                </li>
-            </ul>
-        </div>
+        <title>Index</title>
 
-        <!-- Page title / heading -->
-        <div class="col-md-12">
-            <h1 id="heading">
-                Home
-            </h1>
-        </div>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="static/css/style.css"/>
+    </head>
+    <body>
+        <!-- Container wrapper -->
+        <div class="container-fluid" id="mainContainer">
+            <!-- Page title / heading -->
+            <div class="container-fluid" id="shared-title-container">
+                <div class="row" id="shared-title-row">
+                    <div class="col-11 text-start" id="title-column">
+                        <h1>
+                            Home
+                        </h1>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Content body -->
-        <div class="col-md-12" id="content-body">
-            <body>
-                All of the projects I have completed throughout the 2022 Data Analytics course, offered through the University of Wisconsin-Madison, are on display here. My latest resume is available to read on the site with interactive links to company websites and GitHub repositories which hold my work.
-            </body>
-        </div>
-
-        <!-- Footer - contact links -->
-        <div class="d-flex justify-content-center">
-            <div class="btn-group" role="group" id="footer-links">
-                <button type="button" class="btn btn-white"><a href="mailto:edirksen.work@gmail.com">Contact me</a></button>
-                <button type='button' class="btn btn-white"><a href="https://www.linkedin.com/in/ethandirksen/">LinkedIn</a></button>
-                <button type='button' class="btn btn-white"><a href="https://github.com/etdirksen">GitHub Page</a></button>
+            <!-- Content body -->
+            <div class="container-fluid" id="content-body">
+                <body>
+                    All of the projects I have completed throughout the 2022 Data Analytics course, offered through the University of Wisconsin-Madison, are on display here. My latest resume is available to read on the site with interactive links to company websites and GitHub repositories which hold my work.
+                </body>
             </div>
         </div>
 
-    </div>
-</body>
+        <script type="module" src="./static/js/main.js"></script>
+    </body>
 </html>
